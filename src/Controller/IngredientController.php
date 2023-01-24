@@ -55,8 +55,13 @@ class IngredientController extends AbstractController
         
             $manager->persist($ingredient);
             $manager->flush();
-        }
-
+            
+            $this->addFlash(
+                'success',
+                'Votre ingredient a été ajouté avec succès !'
+            );
+        } 
+            // $this->redirectToRoute('ingredient.index');      Fonctionne pas
         return $this->render('pages/ingredient/new.html.twig', [
             'form' => $form->createView()
         ]);

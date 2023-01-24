@@ -4,13 +4,11 @@ namespace App\Form;
 
 use App\Entity\Ingredient;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\Validator\Constraints\Length;
-use Symfony\Component\Validator\Constraints\NotBlank;
-use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\MoneyType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class IngredientType extends AbstractType
 {
@@ -21,35 +19,35 @@ class IngredientType extends AbstractType
                 'attr' => [
                     'class' => 'form-control',
                     'minlenght' => '2',
-                    'maxlenght' => '50'
-                    ],
-                    'label' => 'Nom',
-                    'label_attr' => [
-                        'class' => 'form-label mt-3' 
-                    ],
-                    // 'contraints' => [
-                    //     new Length(['min' => 2, 'max' => 50]),
-                    //     new NotBlank(['message' => 'Please enter'])
-                    // ]
-                ])
+                    'maxlenght' => '50',
+                ],
+                'label' => 'Nom',
+                'label_attr' => [
+                    'class' => 'form-label mt-3',
+                ],
+                // 'contraints' => [
+                //     new Length(['min' => 2, 'max' => 50]),
+                //     new NotBlank(['message' => 'Please enter'])
+                // ]
+            ])
             ->add('price', MoneyType::class, [
-            'attr' => [
-                'class' => 'form-control'],
-    
+                'attr' => [
+                    'class' => 'form-control'],
+
                 'label' => 'Prix',
                 'label_attr' => [
-                    'class' => 'form-label mt-3' 
+                    'class' => 'form-label mt-3',
                 ],
                 // 'contraints' => [
                 //     new Assert\Positive(),
                 //     new Assert\LessThan(200)
                 // ]
             ])
-            ->add('submit' , SubmitType::class, [
+            ->add('submit', SubmitType::class, [
                 'attr' => [
-                    'class' => 'btn btn-primary mt-3'
+                    'class' => 'btn btn-primary mt-3',
                 ],
-                'label' => 'Créer mon ingrédient'
+                'label' => 'Créer mon ingrédient',
             ]);
     }
 
