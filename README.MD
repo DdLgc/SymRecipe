@@ -1,9 +1,9 @@
-#Création d'un site avec Symfony 
+# Création d'un site avec Symfony 
 
-##Description 
+## Description 
 
-###Site de listing d'ingredients, creation modification et suppression d'ingrédients [CRUD]
+### Site de listing d'ingredients, creation modification et suppression d'ingrédients [CRUD]
 
-##Techno
+## Techno
 
-###Symfony 6.1.10 PHP 8.1.12 Composer Doctrine Twig
+### Symfony 6.1.10 PHP 8.1.12 Composer Doctrine Twig
